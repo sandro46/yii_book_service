@@ -39,6 +39,13 @@ class SiteController extends Controller
 		$this->render('index', array('allBooks'=>$all));
 	}
 	
+	public function actionBook()
+	{
+		$model=new Books;
+		$book = $model->getBookByID($_GET['id']);
+		$this->render('book', array('book'=>$book));
+	}
+	
 	public function actionZakaz()
 	{
 		// var_dump($_POST);

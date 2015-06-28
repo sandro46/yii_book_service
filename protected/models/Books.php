@@ -31,6 +31,11 @@ class Books extends CActiveRecord
 		return $this->findAllByPk($ids);
 	}
 	
+	public function getBookByID($id)
+	{
+		return $this->findByPk($id);
+	}
+	
 	public function searchB($title, $author)
 	{
 		if($title!=''){

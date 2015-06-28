@@ -35,7 +35,7 @@ $this->pageTitle=Yii::app()->name;
 		<?foreach($allBooks as $book){?>
 			<tr>
 				<td><?=$book->id_b?></td>
-				<td><?=$book->title_b?></td>
+				<td><a href='<?=$this->createUrl('site/book', array("id"=>$book->id_b))?>'><?=$book->title_b?></a></td>
 				<td><?=$book->author_b?></td>
 				<td><?=$book->isbn_b?></td>
 				<td><?=$book->prise_b?></td>
